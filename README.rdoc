@@ -1,28 +1,15 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project is to get the hang of the imsas api for a project i've been asked to work on
 
-Things you may want to cover:
+necessary functionality so far:
 
-* Ruby version
+* Get background check info about user from api
 
-* System dependencies
+* assign a score to different crimes
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* approve or deny based on that score
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+
+I'll also wrap the imsas api into a ruby gem to make thing easier for myself and maybe other developers that want to use this api in rails
