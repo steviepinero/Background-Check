@@ -9,7 +9,3 @@ necessary functionality so far:
 * assign a score to different crimes
 
 * approve or deny based on that score
-
-
-
-I'll also wrap the imsas api into a ruby gem to make thing easier for myself and maybe other developers that want to use this api in rails
