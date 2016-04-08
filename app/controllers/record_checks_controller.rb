@@ -40,8 +40,8 @@ class RecordChecksController < ApplicationController
     end
     #Generates aproval code and saves it to a variable TODO: include this variable in the DB
   def generate_approval_code(size = 9)
-  charset = %w{ 2 3 4 6 7 9 A C D E F G H J K M N P Q R T V W X Y Z}
-  @code = (0...size).map{ charset.to_a[rand(charset.size)] }.join
+    charset = %w{ 2 3 4 6 7 9 A C D E F G H J K M N P Q R T V W X Y Z}
+    @code = (0...size).map{ charset.to_a[rand(charset.size)] }.join
   end
 
   # GET /record_checks

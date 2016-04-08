@@ -45,7 +45,7 @@
   </div>
   <div class="field">
     <%= f.label :DOB %><br>
-    <%= f.text_field :DOB %>
+    <%= f.date_select :DOB, {order: [:month, :day, :year], prompt: { day: 'Select day', month: 'Select month', year: 'Select year' }, start_year: Date.today.year - 18, end_year: Date.today.year - 100}, {required: true} %>
   </div>
   <div class="field">
     <%= f.label :ageMin %><br>
@@ -61,7 +61,7 @@
   </div>
   <div class="field">
     <%= f.label :exactMatch %><br>
-    <%= f.text_field :exactMatch %>
+    <%= f.check_box :exactMatch %>
   </div>
   <div class="actions">
     <%= f.submit %>
