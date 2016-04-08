@@ -29,10 +29,13 @@ options = {
 
 
 
-opt = JSON.generate(options)
-url = 'https://api.imsasllc.com/v3/'
-response = HTTParty.post(url, body: opt, :headers => {'Content-Type' => 'application/json' })
-@parsed = JSON.parse(response.body)
-p @parsed
+@opt = JSON.generate(options)
+@url = 'https://api.imsasllc.com/v3/'
+@response = HTTParty.post(@url, body: @opt, :headers => {'Content-Type' => 'application/json' })
+@parsed = JSON.parse(@response.body)
+# p @parsed
 end
 end
+
+puts a = ApiCall.new
+puts a.getRecords

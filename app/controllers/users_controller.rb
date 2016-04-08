@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-  attr_accessor :FirstName, :LastName, :MiddleName, :Address, :City, :State, :Zip, :County, :DOB, :AgeMin, :AgeMax, :Limit, :ExactMatch
+
   # GET /users
   # GET /users.json
   def index
@@ -10,18 +10,18 @@ class UsersController < ApplicationController
   # optional, but probably a good idea
   # validates :external_id, :uniqueness => true
 
-  def self.save_data_from_api
-    response = HTTParty.get('URI')
-    user_data = JSON.parse(response)
-    users = user_data.map do |line|
-      u = User.new
-      u.external_id = line['user']['id']
-      # set name value however you want to do that
-      u.save
-      u
-    end
-    users.select(&:persisted?)
-  end
+  # def self.save_data_from_api
+  #   response = HTTParty.get('URI')
+  #   user_data = JSON.parse(response)
+  #   users = user_data.map do |line|
+  #     u = User.new
+  #     u.external_id = line['user']['id']
+  #     # set name value however you want to do that
+  #     u.save
+  #     u
+  #   end
+  #   users.select(&:persisted?)
+  # end
 
   # GET /users/1
   # GET /users/1.json

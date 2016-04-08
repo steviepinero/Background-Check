@@ -2,7 +2,8 @@ class CriminalCheckController < ApplicationController
 
     def getDetails
 
-      @apiResponse = ApiCall.new.getRecords
+      @apiResponse = ApiCall.new
+      @apiResponse.getRecords
     end
 
 end
