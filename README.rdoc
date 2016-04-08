@@ -1,9 +1,9 @@
-== README
+== PetVerify
 
-This project is to get the hang of the imsas api:
+
 
 * Get background check info about user from api
 
-* assign a score to different crimes
+* assign a score to different crimes{anything with animal = no}
 
 * approve or deny based on that score
