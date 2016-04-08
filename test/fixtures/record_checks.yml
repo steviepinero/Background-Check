@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  firstName: MyString
+  middleName: MyString
+  lastName: MyString
+  address: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  county: MyString
+  DOB: MyString
+  ageMin: 1
+  ageMax: 1
+  limit: 1
+  exactMatch: MyString
+
+two:
+  firstName: MyString
+  middleName: MyString
+  lastName: MyString
+  address: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  county: MyString
+  DOB: MyString
+  ageMin: 1
+  ageMax: 1
+  limit: 1
+  exactMatch: MyString

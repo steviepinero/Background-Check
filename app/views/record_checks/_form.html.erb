@@ -1,0 +1,69 @@
+<%= form_for(@record_check) do |f| %>
+  <% if @record_check.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@record_check.errors.count, "error") %> prohibited this record_check from being saved:</h2>
+
+      <ul>
+      <% @record_check.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :firstName %><br>
+    <%= f.text_field :firstName %>
+  </div>
+  <div class="field">
+    <%= f.label :middleName %><br>
+    <%= f.text_field :middleName %>
+  </div>
+  <div class="field">
+    <%= f.label :lastName %><br>
+    <%= f.text_field :lastName %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br>
+    <%= f.text_field :state %>
+  </div>
+  <div class="field">
+    <%= f.label :zip %><br>
+    <%= f.text_field :zip %>
+  </div>
+  <div class="field">
+    <%= f.label :county %><br>
+    <%= f.text_field :county %>
+  </div>
+  <div class="field">
+    <%= f.label :DOB %><br>
+    <%= f.text_field :DOB %>
+  </div>
+  <div class="field">
+    <%= f.label :ageMin %><br>
+    <%= f.number_field :ageMin %>
+  </div>
+  <div class="field">
+    <%= f.label :ageMax %><br>
+    <%= f.number_field :ageMax %>
+  </div>
+  <div class="field">
+    <%= f.label :limit %><br>
+    <%= f.number_field :limit %>
+  </div>
+  <div class="field">
+    <%= f.label :exactMatch %><br>
+    <%= f.text_field :exactMatch %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

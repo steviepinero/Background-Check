@@ -1,8 +1,6 @@
 == README
 
-This project is to get the hang of the imsas api for a project i've been asked to work on
-
-necessary functionality so far:
+This project is to get the hang of the imsas api:
 
 * Get background check info about user from api
 

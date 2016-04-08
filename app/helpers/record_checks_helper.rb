@@ -1,0 +1,2 @@
+module RecordChecksHelper
+end
