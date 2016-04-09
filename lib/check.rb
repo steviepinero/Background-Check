@@ -1,5 +1,6 @@
 require 'httparty'
 require 'JSON'
+require 'hashie'
 
 class ApiCall
 
@@ -12,6 +13,10 @@ class ApiCall
 #   @flatter = flatter
 # end
 public
+
+# def deep_find(key)
+#     key?(key) ? self[key] : self.values.inject(nil) {|memo, v| memo ||= v.deep_find(key) if v.respond_to?(:deep_find) }
+# end
 
 def flatten_hash(hash)
   hash.each_with_object({}) do |(k, v), h|
@@ -26,6 +31,7 @@ def flatten_hash(hash)
 end
 
 
+
 def getRecords
 options = {
   :credentials => {
@@ -35,7 +41,7 @@ options = {
   :product => "criminal_database",
   :data => {
   :FirstName => "Michael",
-  :LastName => "Vick",
+  :LastName => "Vince",
   :MiddleName => "D",
   :Address => "",
   :City => "",
@@ -55,31 +61,28 @@ options = {
 @opt = JSON.generate(options)
 @url = 'https://api.imsasllc.com/v3/'
 @response = HTTParty.post(@url, body: @opt, :headers => {'Content-Type' => 'application/json' })
-@@parsed = JSON.parse(@response.body)
- p @flatter = flatten_hash(@@parsed)
- puts "Abuser" if  @flatter["Results"] == "ANIMALS"
- puts "after find crime"
-
-end
-
-def find_all_values_for(key)
-  result = []
-  result << self[key]
-  self.values.each do |hash_value|
-    values = [hash_value] unless hash_value.is_a? Array
-    values.each do |value|
-      result += value.find_all_values_for(key) if value.is_a? Hash
-    end
-  end
-  result.compact
-end
-
+@@parsed = JSON.parse(@response.body, :symbolize_names => true)
+ # p @flatter = flatten_hash(@@parsed)
+ # puts "Abuser" if  @flatter[:Results] == "ANIMALS"
+ # puts "after find crime"
 
 end
 
 
 
 
- a = ApiCall.new
-puts a.getRecords
-p a.find_all_values_for(:"Results")
+end
+
+
+
+#returns the Description
+ a = ApiCall.new.getRecords
+ a.extend Hashie::Extensions::DeepFind
+deeper = a.deep_find(:Description)
+if deeper.include? "ANIMAL"  #asks if animal is included
+  puts deeper
+  puts "Not approved"
+else
+  puts deeper
+  puts "approved"
+end
