@@ -50,6 +50,20 @@ def generate_approval_code(size = 9)
 end
 
 
+  def approval_check
+    #returns the Description
+     a = ApiCall.new.getRecords
+     a.extend Hashie::Extensions::DeepFind
+    deeper = a.deep_find(:Description)
+    if deeper.include? "ANIMAL"  #asks if animal is included
+      puts "Not approved"
+      # redirect_to rejection_path
+    else
+      puts "approved"
+      # redirect_to approval_path
+    end
+  end
+
   def show
 
   end

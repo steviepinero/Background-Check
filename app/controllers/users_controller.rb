@@ -7,21 +7,6 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
-  # optional, but probably a good idea
-  # validates :external_id, :uniqueness => true
-
-  # def self.save_data_from_api
-  #   response = HTTParty.get('URI')
-  #   user_data = JSON.parse(response)
-  #   users = user_data.map do |line|
-  #     u = User.new
-  #     u.external_id = line['user']['id']
-  #     # set name value however you want to do that
-  #     u.save
-  #     u
-  #   end
-  #   users.select(&:persisted?)
-  # end
 
   # GET /users/1
   # GET /users/1.json
@@ -42,14 +27,11 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
 
-    respond_to do |format|
-      if @user.save
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
-        format.json { render :show, status: :created, location: @user }
-      else
-        format.html { render :new }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
-      end
+    if @user.save
+      session[:user_id] = @user.id
+      redirect_to '/'
+    else
+      redirect_to '/signup'
     end
   end
 
