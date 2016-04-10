@@ -5,18 +5,10 @@ require 'hashie'
 class ApiCall
 
 
-# def initialize
-#   @opt = opt
-#   @url = url
-#   @response = response
-#   @parsed = parsed
-#   @flatter = flatter
-# end
-public
 
-# def deep_find(key)
-#     key?(key) ? self[key] : self.values.inject(nil) {|memo, v| memo ||= v.deep_find(key) if v.respond_to?(:deep_find) }
-# end
+
+
+
 
 def flatten_hash(hash)
   hash.each_with_object({}) do |(k, v), h|
