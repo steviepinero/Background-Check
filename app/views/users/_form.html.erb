@@ -11,9 +11,21 @@
     </div>
   <% end %>
 
+  <% form_tag :action => :create do %>
+
+    <%= label_tag :user, 'Username: ' %><br>
+    <%= text_field_tag :user %><br>
+
+    <%= label_tag :password, 'Password: ' %><br>
+    <%= password_field_tag :password %><br>
+
+    <%= submit_tag 'Login' %>
+
+  <% end %>
   <div class="actions">
-    <%= f.email %>
-    <%= f.password %>
-    <%= f.submit %>
+
+
+
+
   </div>
 <% end %>
