@@ -2,17 +2,18 @@ class RecordChecksController < ApplicationController
   before_action :set_record_check, only: [:show, :edit, :update, :destroy]
   helper_method :getRecords
 
+  #TODO declare variables first
 
   #will get response from api for micheal vick
     def getRecords
     @options = {
       :credentials => {
-        :account_id => "127993",
-        :api_key => "3M1Dp0VtKL8HEAtSX7MM2P0Xid"
+        :account_id => "128003",
+        :api_key => "kJrz2U9LCuGNcwRJZrN9rTyrfQ"
       },
       :product => "criminal_database",
       :data => {
-      :FirstName => "Michael",
+      :FirstName => "Michael", #TODO assign variables to api call
       :LastName => "Vick",
       :MiddleName => "D",
       :Address => "",
@@ -22,9 +23,9 @@ class RecordChecksController < ApplicationController
       :County => "",
       :DOB => "1980-06-26",
       :AgeMin => 0,
-      :AgeMax => 70,
+      :AgeMax => 120,
       :Limit => 1,
-      :ExactMatch => "no"
+      :ExactMatch => "yes"
     }
     }
 
@@ -37,7 +38,7 @@ class RecordChecksController < ApplicationController
 
     p @parsed
     end
-    
+
 
   # GET /record_checks
   # GET /record_checks.json
