@@ -1,8 +1,8 @@
 class RecordChecksController < ApplicationController
   before_action :set_record_check, only: [:show, :edit, :update, :destroy]
   helper_method :getRecords
-
-  #TODO declare variables first
+  attr_accessor :FirstName, :LastName, :MiddleName, :Address, :City, :State, :County, :DOB
+  #variables are readable and writeable
 
   #will get response from api for micheal vick
     def getRecords
