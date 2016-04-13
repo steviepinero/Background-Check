@@ -9,24 +9,24 @@ class RecordCheck < ActiveRecord::Base
   def getRecords
   @options = {
     :credentials => {
-      :account_id => "127993",
-      :api_key => "3M1Dp0VtKL8HEAtSX7MM2P0Xid"
+      :account_id => "128003",
+      :api_key => "kJrz2U9LCuGNcwRJZrN9rTyrfQ"
     },
     :product => "criminal_database",
     :data => {
-    :FirstName => "Michael",
-    :LastName => "Vick",
-    :MiddleName => "D",
-    :Address => "",
-    :City => "",
-    :State => "Va",
-    :Zip => "",
-    :County => "",
-    :DOB => "1980-06-26",
+    :FirstName => params[:firstName],
+    :LastName => params[:lastName],
+    :MiddleName => params[:middleName],
+    :Address => params[:address],
+    :City => params[:city],
+    :State => params[:state],
+    :Zip => params[:zip],
+    :County => params[:county],
+    :DOB => params[:DOB],
     :AgeMin => 0,
-    :AgeMax => 70,
+    :AgeMax => 120,
     :Limit => 1,
-    :ExactMatch => "no"
+    :ExactMatch => "yes"
   }
   }
 

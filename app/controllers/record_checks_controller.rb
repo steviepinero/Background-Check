@@ -1,11 +1,15 @@
 class RecordChecksController < ApplicationController
   before_action :set_record_check, only: [:show, :edit, :update, :destroy]
-  helper_method :getRecords
-  attr_accessor :FirstName, :LastName, :MiddleName, :Address, :City, :State, :County, :DOB
-  #variables are readable and writeable
 
-  #will get response from api for micheal vick
+  helper_method :getRecords
+  attr_accessor :FirstName, :LastName, :MiddleName, :Address, :City, :State, :Zip, :County, :DOB
+
     def getRecords
+
+
+
+
+
     @options = {
       :credentials => {
         :account_id => "128003",
@@ -13,15 +17,15 @@ class RecordChecksController < ApplicationController
       },
       :product => "criminal_database",
       :data => {
-      :FirstName => "Michael", #TODO assign variables to api call
-      :LastName => "Vick",
-      :MiddleName => "D",
-      :Address => "",
-      :City => "",
-      :State => "Va",
-      :Zip => "",
-      :County => "",
-      :DOB => "1980-06-26",
+      :FirstName => params[:firstName],
+      :LastName => params[:lastName],
+      :MiddleName => params[:middleName],
+      :Address => params[:address],
+      :City => params[:city],
+      :State => params[:state],
+      :Zip => params[:zip],
+      :County => params[:county],
+      :DOB => params[:DOB],
       :AgeMin => 0,
       :AgeMax => 120,
       :Limit => 1,
@@ -35,7 +39,7 @@ class RecordChecksController < ApplicationController
     @url = 'https://api.imsasllc.com/v3/'
     @response = HTTParty.post(@url, body: @opt, :headers => {'Content-Type' => 'application/json' })
     @parsed = JSON.parse(@response.body)
-
+    byebug
     p @parsed
     end
 
