@@ -1,51 +1,57 @@
 class RecordChecksController < ApplicationController
-  before_action :set_record_check, only: [:show, :edit, :update, :destroy]
+  def new
+    @record_check = RecordCheck.new
+  end
 
-  helper_method :getRecords
-  attr_accessor :FirstName, :LastName, :MiddleName, :Address, :City, :State, :Zip, :County, :DOB
-
-    def getRecords
-
-
-
-
-
+  def create
     @options = {
-      :credentials => {
-        :account_id => "128003",
-        :api_key => "kJrz2U9LCuGNcwRJZrN9rTyrfQ"
-      },
-      :product => "criminal_database",
+    :credentials => {
+    :account_id => "128003",
+    :api_key => "	kJrz2U9LCuGNcwRJZrN9rTyrfQ	"
+    },
+    :product => "criminal_database",
       :data => {
-      :FirstName => params[:firstName],
-      :LastName => params[:lastName],
-      :MiddleName => params[:middleName],
-      :Address => params[:address],
-      :City => params[:city],   # TODO find out why the api call isnt working with custom content
-      :State => params[:state],
-      :Zip => params[:zip],
-      :County => params[:county],
-      :DOB => params[:DOB],
+      :FirstName => params[:record_check][:first_name],
+      :LastName => params[:record_check][:last_name],
+      :MiddleName => params[:record_check][:middle_name],
+      :Address => params[:record_check][:address],
+      :City => params[:record_check][:city],
+      :State => params[:record_check][:state],
+      :Zip => params[:record_check][:zip],
+      :County => params[:record_check][:county],
+      :DOB => params[:record_check][:dob],
       :AgeMin => 0,
       :AgeMax => 120,
       :Limit => 1,
       :ExactMatch => "yes"
-    }
-    }
-
-
-
-    @opt = JSON.generate(@options)
-    @url = 'https://api.imsasllc.com/v3/'
-    @response = HTTParty.post(@url, body: @opt, :headers => {'Content-Type' => 'application/json' })
-    @parsed = JSON.parse(@response.body)
-    byebug
-    p @parsed
-    end
+      }
+  }
+  @opt = JSON.generate(@options)
+  @url = 'https://api.imsasllc.com/v3/'
+  @response = HTTParty.post(@url, body: @opt, :headers => {'Content-Type' => 'application/json' })
+  @parsed = JSON.parse(@response.body)
+  #byebug
+  p @parsed
+  end
 
     def generate_approval_code(size = 9)
       charset = %w{ 2 3 4 6 7 9 A C D E F G H J K M N P Q R T V W X Y Z}
       @code = (0...size).map{ charset.to_a[rand(charset.size)] }.join
+      @code.save
+    end
+
+    def approval_check
+      #returns the Description
+       a = ApiCall.new.getRecords
+       a.extend Hashie::Extensions::DeepFind
+      deeper = a.deep_find(:Description)
+      if deeper.include? "ANIMAL"  #asks if animal is included
+        puts "Not approved"
+        # redirect_to rejection_path
+      else
+        puts "approved"
+        # redirect_to approval_path
+      end
     end
 
 
@@ -60,30 +66,10 @@ class RecordChecksController < ApplicationController
   def show
   end
 
-  # GET /record_checks/new
-  def new
-    @record_check = RecordCheck.new
-  end
-
   # GET /record_checks/1/edit
   def edit
   end
 
-  # POST /record_checks
-  # POST /record_checks.json
-  def create
-    @record_check = RecordCheck.new(record_check_params)
-
-    respond_to do |format|
-      if @record_check.save
-        format.html { redirect_to @record_check, notice: 'Record check was successfully created.' }
-        format.json { render :show, status: :created, location: @record_check }
-      else
-        format.html { render :new }
-        format.json { render json: @record_check.errors, status: :unprocessable_entity }
-      end
-    end
-  end
 
   # PATCH/PUT /record_checks/1
   # PATCH/PUT /record_checks/1.json

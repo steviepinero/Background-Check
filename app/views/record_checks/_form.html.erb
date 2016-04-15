@@ -1,18 +1,5 @@
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 <%= form_for(@record_check) do |f| %>
-  <% if @record_check.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@record_check.errors.count, "error") %> prohibited this record_check from being saved:</h2>
-
-      <ul>
-      <% @record_check.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-
   <%= f.text_field :firstName, :placeholder => "First Name" %>
   <%= f.text_field :lastName, :placeholder => "Last Name" %>
   <%= f.text_field :middleName, :placeholder => "Middle Name (optional)" %>
@@ -21,8 +8,8 @@
   <%= f.text_field :state, :placeholder => "State (optional)" %>
   <%= f.text_field :zip, :placeholder => "Zip Code (optional)" %>
   <%= f.text_field :county, :placeholder => "County (optional)" %>
-    <%= f.date_select :DOB, {order: [:month, :day, :year], prompt: { day: 'Select day', month: 'Select month', year: 'Select year' }, start_year: Date.today.year - 18, end_year: Date.today.year - 100}, {required: true} %>
-      <div class="actions">
+  <%= f.date_select :DOB, {order: [:month, :day, :year], prompt: { day: 'Select day', month: 'Select month', year: 'Select year' }, start_year: Date.today.year - 18, end_year: Date.today.year - 100}, {required: true} %>
+  <div class="actions">
   <%= f.submit "Get Background Check", class: "btn-submit" %>
   </div>
 <% end %>
