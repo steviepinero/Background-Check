@@ -21,7 +21,7 @@ class RecordChecksController < ApplicationController
       :LastName => params[:lastName],
       :MiddleName => params[:middleName],
       :Address => params[:address],
-      :City => params[:city],
+      :City => params[:city],   # TODO find out why the api call isnt working with custom content
       :State => params[:state],
       :Zip => params[:zip],
       :County => params[:county],
@@ -46,7 +46,7 @@ class RecordChecksController < ApplicationController
     def generate_approval_code(size = 9)
       charset = %w{ 2 3 4 6 7 9 A C D E F G H J K M N P Q R T V W X Y Z}
       @code = (0...size).map{ charset.to_a[rand(charset.size)] }.join
-    end 
+    end
 
 
   # GET /record_checks
