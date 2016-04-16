@@ -32,5 +32,18 @@ class RecordChecksController < ApplicationController
 @parsed = JSON.parse(@response.body)
 #byebug
 p @parsed
+
   end
+def approval
+  @parsed.extend Hashie::Extensions::DeepFind
+  deeper = @parsed.deep_find(:Description)
+     if deeper.count('ANIMAL') #asks if animal is included
+  puts deeper
+  puts"Not approved"
+     else
+  puts deeper
+  puts "approved"
+     end
+end
+
 end

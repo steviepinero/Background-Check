@@ -10,7 +10,9 @@ class CreateRecordChecks < ActiveRecord::Migration
       t.string :zip
       t.string :county
       t.date   :dob
-      
+
+      t.string :approval_code
+
       t.timestamps null: false
     end
   end

@@ -26,8 +26,9 @@ ActiveRecord::Schema.define(version: 20160415214052) do
     t.string   "zip"
     t.string   "county"
     t.date     "dob"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.string   "approval_code"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "users", force: :cascade do |t|
