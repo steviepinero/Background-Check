@@ -1,6 +1,14 @@
-<h1>New Record Check</h1>
-
-<%= render 'form' %>
-<%= generate_approval_code %>
-
-<%= link_to 'Back', record_checks_path %>
+<%= form_for(@record_check) do |f| %>
+  <%= f.text_field :first_name, :placeholder => "First Name" %>
+  <%= f.text_field :last_name, :placeholder => "Last Name" %>
+  <%= f.text_field :middle_name, :placeholder => "Middle Name (optional)" %>
+  <%= f.text_field :address, :placeholder => "Address (optional)" %>
+  <%= f.text_field :city, :placeholder => "City (optional)" %>
+  <%= f.text_field :state, :placeholder => "State (optional)" %>
+  <%= f.text_field :zip, :placeholder => "Zip Code (optional)" %>
+  <%= f.text_field :county, :placeholder => "County (optional)" %>
+  <%= f.date_select :dob, {order: [:month, :day, :year], prompt: { day: 'Select day', month: 'Select month', year: 'Select year' }, start_year: Date.today.year - 18, end_year: Date.today.year - 100}, {required: true} %>
+  <div class="actions">
+    <%= f.submit "Get Background Check", class: "btn-submit" %>
+  </div>
+<% end %>
