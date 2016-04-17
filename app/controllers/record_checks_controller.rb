@@ -1,13 +1,19 @@
 class RecordChecksController < ApplicationController
+
   def new
   @record_check = RecordCheck.new
   end
 
+  def include?(other)
+   self.merge(other) == self
+  end
+
+
   def create
   @options = {
   :credentials => {
-  :account_id => "128003",
-  :api_key => "kJrz2U9LCuGNcwRJZrN9rTyrfQ"
+  :account_id => "128007",
+  :api_key => "omy0WtdXc55LWUl48vjjklXuB4"
   },
   :product => "criminal_database",
     :data => {
@@ -32,18 +38,21 @@ class RecordChecksController < ApplicationController
 @parsed = JSON.parse(@response.body)
 #byebug
 p @parsed
-
+  p approval
   end
+
 def approval
   @parsed.extend Hashie::Extensions::DeepFind
-  deeper = @parsed.deep_find(:Description)
-     if deeper.count('ANIMAL') #asks if animal is included
-  puts deeper
-  puts"Not approved"
+  @deeper = @parsed.deep_find(:Description)
+     if @deeper.include?("ANIMAL") #asks if animal is included
+  p @deeper
+   @decision = "Not approved"
      else
-  puts deeper
-  puts "approved"
+  p @deeper
+   @decision = "approved"
      end
 end
+
+new :approval, :after => :create
 
 end
