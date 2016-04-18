@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'welcome#index'
-  get  'record_checks/create' => 'record_checks#new'
+  get  'record_checks' => 'record_checks#new'
   post 'record_checks/create' => 'record_checks#create'
 
   # Example of regular route:
