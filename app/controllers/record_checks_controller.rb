@@ -44,7 +44,7 @@ p @parsed
 def approval
   @parsed.extend Hashie::Extensions::DeepFind
   @deeper = @parsed.deep_find(:Description)
-     if @deeper.include?("ANIMAL") #asks if animal is included
+     if @deeper.to_s.include? "ANIMAL" #asks if animal is included
   p @deeper
    @decision = "Not approved"
      else
@@ -53,6 +53,6 @@ def approval
      end
 end
 
-new :approval, :after => :create
+
 
 end
