@@ -1,3 +1,707 @@
 // Place all the styles related to the record_checks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+// .version.index /* version checker */
+// {
+// 	color: #0000F4;
+// 	background-color: #756857;
+// }
+
+// #page
+// {
+// 	z-index: 1;
+// 	width: 960px;
+// 	min-height: 1482.7999999999984px;
+// 	background-image: none;
+// 	border-width: 0px;
+// 	border-color: transparent;
+// 	background-color: transparent;
+// 	padding-bottom: 0px;
+// 	margin-left: auto;
+// 	margin-right: auto;
+// }
+//
+// #page_position_content
+// {
+// 	margin-top: -1px;
+// 	padding-bottom: 66px;
+// 	width: 0.01px;/* should not cover content below */
+// }
+//
+// #pu9127
+// {
+// 	width: 0.01px;
+// 	padding-bottom: 140px;
+// 	margin-left: -100px;
+// }
+//
+// #u9127
+// {
+// 	z-index: 20;
+// 	width: 960px;
+// 	height: 2px;
+// 	background-color: #00E016;
+// 	position: fixed;
+// 	top: 91px;
+// 	left: 50%;
+// 	margin-left: -480px;
+// }
+//
+// #u9139
+// {
+// 	z-index: 21;
+// 	height: 122px;
+// 	background-color: #FFFFFF;
+// 	position: fixed;
+// 	top: -1px;
+// }
+//
+// #u9139-bw
+// {
+// 	z-index: 21;
+// }
+//
+// #u9140
+// {
+// 	z-index: 22;
+// 	width: 271px;
+// 	height: 92px;
+// 	border-width: 0px;
+// 	border-color: transparent;
+// 	position: fixed;
+// 	top: 22px;
+// 	left: 50%;
+// 	margin-left: -580px;
+// 	background: #FFFFFF image-url("petlogo1copy.png") no-repeat center center;
+// }
+//
+// #u9172
+// {
+// 	z-index: 23;
+// 	width: 130px;
+// 	background-color: transparent;
+// 	position: fixed;
+// 	top: 51px;
+// 	left: 50%;
+// 	margin-left: 203px;
+// }
+//
+// #u9174
+// {
+// 	z-index: 25;
+// 	width: 173px;
+// 	height: 140px;
+// 	-pie-box-shadow: -4px 7px 8px #7F7F7F;
+// 	box-shadow: -4px 7px 8px rgba(0,0,0,0.5);
+// 	background: -webkit-gradient(linear, center top, center bottom, from(#00E016),color-stop(100%, #236406));
+// 	background: -webkit-linear-gradient(top,#00E016 ,#236406 100%);
+// 	background: linear-gradient(to bottom,#00E016 ,#236406 100%);
+// 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF00E016, endColorstr=#FF236406, GradientType=0);
+// 	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF00E016', endColorstr='#FF236406', GradientType=0)";
+// 	position: fixed;
+// 	top: -1px;
+// 	left: 50%;
+// 	margin-left: 371px;
+// }
+//
+// #u9175-4
+// {
+// 	z-index: 26;
+// 	position: fixed;
+// 	top: 49px;
+// 	left: 50%;
+// 	margin-left: 380px;
+// }
+//
+// #u9175-4_img
+// {
+// 	display: block;
+// 	vertical-align: top;
+// }
+//
+// #menuu14962
+// {
+// 	z-index: 30;
+// 	width: 515px;
+// 	border-width: 0px;
+// 	border-color: transparent;
+// 	background-color: transparent;
+// 	position: fixed;
+// 	top: 30px;
+// 	left: 50%;
+// 	margin-left: -323px;
+// }
+//
+// #u14991
+// {
+// 	width: 87px;
+// 	min-height: 81px;
+// 	background-color: transparent;
+// 	position: relative;
+// 	margin-right: -10000px;
+// }
+//
+// #u14992
+// {
+// 	width: 87px;
+// 	border-width: 0px;
+// 	border-color: transparent;
+// 	background-color: transparent;
+// 	border-radius: 4px;
+// 	padding-bottom: 53px;
+// 	position: relative;
+// }
+//
+// #u14992.MuseMenuActive
+// {
+// 	border-width: 0px;
+// 	border-color: transparent;
+// 	background-color: #F6F6DB;
+// 	border-radius: 0px;
+// 	width: 87px;
+// 	min-height: 0px;
+// 	margin: 0px;
+// }
+//
+// #u14994-4
+// {
+// 	width: 70px;
+// 	min-height: 28px;
+// 	border-width: 0px;
+// 	border-color: transparent;
+// 	background-color: transparent;
+// 	color: #236406;
+// 	text-align: center;
+// 	font-size: 23px;
+// 	font-family: source-sans-pro, sans-serif;
+// 	font-weight: 400;
+// 	position: relative;
+// 	margin-right: -10000px;
+// 	top: 26px;
+// 	left: 8px;
+// }
+//
+// #u14992:hover #u14994-4
+// {
+// 	padding-top: 0px;
+// 	padding-bottom: 0px;
+// 	min-height: 28px;
+// 	width: 70px;
+// 	margin: 0px -10000px 0px 0px;
+// }
+//
+// #u14992.MuseMenuActive #u14994-4
+// {
+// 	border-width: 0px;
+// 	border-color: transparent;
+// 	padding-top: 0px;
+// 	padding-bottom: 0px;
+// 	min-height: 28px;
+// 	width: 70px;
+// 	margin: 0px -10000px 0px 0px;
+// }
+//
+// #u14992:hover #u14994-4 p
+// {
+// 	font-family: source-sans-pro, sans-serif;
+// 	font-weight: 400;
+// 	font-style: normal;
+// }
+//
+// #u14977
+// {
+// 	width: 78px;
+// 	min-height: 81px;
+// 	background-color: transparent;
+// 	position: relative;
+// 	margin-right: -10000px;
+// 	left: 89px;
+// }
+//
+// #u14978
+// {
+// 	width: 78px;
+// 	border-width: 0px;
+// 	border-color: transparent;
+// 	background-color: transparent;
+// 	border-radius: 4px;
+// 	padding-bottom: 53px;
+// 	position: relative;
+// }
+//
+// #u14978.MuseMenuActive
+// {
+// 	border-width: 0px;
+// 	border-color: transparent;
+// 	background-color: #F6F6DB;
+// 	border-radius: 0px;
+// 	width: 78px;
+// 	min-height: 0px;
+// 	margin: 0px;
+// }
+//
+// #u14979-4
+// {
+// 	width: 61px;
+// 	min-height: 28px;
+// 	border-width: 0px;
+// 	border-color: transparent;
+// 	background-color: transparent;
+// 	color: #236406;
+// 	text-align: center;
+// 	font-size: 23px;
+// 	font-family: source-sans-pro, sans-serif;
+// 	font-weight: 400;
+// 	position: relative;
+// 	margin-right: -10000px;
+// 	top: 26px;
+// 	left: 8px;
+// }
+//
+// #u14978:hover #u14979-4
+// {
+// 	padding-top: 0px;
+// 	padding-bottom: 0px;
+// 	min-height: 28px;
+// 	width: 61px;
+// 	margin: 0px -10000px 0px 0px;
+// }
+//
+// #u14978.MuseMenuActive #u14979-4
+// {
+// 	border-width: 0px;
+// 	border-color: transparent;
+// 	padding-top: 0px;
+// 	padding-bottom: 0px;
+// 	min-height: 28px;
+// 	width: 61px;
+// 	margin: 0px -10000px 0px 0px;
+// }
+//
+// #u14978:hover #u14979-4 p
+// {
+// 	font-family: source-sans-pro, sans-serif;
+// 	font-weight: 400;
+// 	font-style: normal;
+// }
+//
+// #u14970
+// {
+// 	width: 111px;
+// 	min-height: 81px;
+// 	background-color: transparent;
+// 	position: relative;
+// 	margin-right: -10000px;
+// 	left: 169px;
+// }
+//
+// #u14971
+// {
+// 	width: 111px;
+// 	border-width: 0px;
+// 	border-color: transparent;
+// 	background-color: transparent;
+// 	border-radius: 4px;
+// 	padding-bottom: 53px;
+// 	position: relative;
+// }
+//
+// #u14971.MuseMenuActive
+// {
+// 	border-width: 0px;
+// 	border-color: transparent;
+// 	background-color: #F6F6DB;
+// 	border-radius: 0px;
+// 	width: 111px;
+// 	min-height: 0px;
+// 	margin: 0px;
+// }
+//
+// #u14972-4
+// {
+// 	width: 94px;
+// 	min-height: 28px;
+// 	border-width: 0px;
+// 	border-color: transparent;
+// 	background-color: transparent;
+// 	color: #236406;
+// 	text-align: center;
+// 	font-size: 23px;
+// 	font-family: source-sans-pro, sans-serif;
+// 	font-weight: 400;
+// 	position: relative;
+// 	margin-right: -10000px;
+// 	top: 26px;
+// 	left: 8px;
+// }
+//
+// #u14971:hover #u14972-4
+// {
+// 	padding-top: 0px;
+// 	padding-bottom: 0px;
+// 	min-height: 28px;
+// 	width: 94px;
+// 	margin: 0px -10000px 0px 0px;
+// }
+//
+// #u14971:hover #u14972-4 p
+// {
+// 	font-family: source-sans-pro, sans-serif;
+// 	font-weight: 400;
+// 	font-style: normal;
+// }
+//
+// #u14984
+// {
+// 	width: 121px;
+// 	min-height: 81px;
+// 	background-color: transparent;
+// 	position: relative;
+// 	margin-right: -10000px;
+// 	left: 282px;
+// }
+//
+// #u14985
+// {
+// 	width: 121px;
+// 	border-width: 0px;
+// 	border-color: transparent;
+// 	background-color: transparent;
+// 	border-radius: 4px;
+// 	padding-bottom: 53px;
+// 	position: relative;
+// }
+//
+// #u14985.MuseMenuActive
+// {
+// 	border-width: 0px;
+// 	border-color: transparent;
+// 	background-color: #F6F6DB;
+// 	border-radius: 0px;
+// 	width: 121px;
+// 	min-height: 0px;
+// 	margin: 0px;
+// }
+//
+// #u14987-4
+// {
+// 	width: 105px;
+// 	min-height: 28px;
+// 	border-width: 0px;
+// 	border-color: transparent;
+// 	background-color: transparent;
+// 	color: #236406;
+// 	text-align: center;
+// 	font-size: 23px;
+// 	font-family: source-sans-pro, sans-serif;
+// 	font-weight: 400;
+// 	position: relative;
+// 	margin-right: -10000px;
+// 	top: 26px;
+// 	left: 8px;
+// }
+//
+// #u14985:hover #u14987-4
+// {
+// 	padding-top: 0px;
+// 	padding-bottom: 0px;
+// 	min-height: 28px;
+// 	width: 105px;
+// 	margin: 0px -10000px 0px 0px;
+// }
+//
+// #u14985.MuseMenuActive #u14987-4
+// {
+// 	border-width: 0px;
+// 	border-color: transparent;
+// 	padding-top: 0px;
+// 	padding-bottom: 0px;
+// 	min-height: 28px;
+// 	width: 105px;
+// 	margin: 0px -10000px 0px 0px;
+// }
+//
+// #u14985:hover #u14987-4 p
+// {
+// 	font-family: source-sans-pro, sans-serif;
+// 	font-weight: 400;
+// 	font-style: normal;
+// }
+//
+// #u14963
+// {
+// 	width: 110px;
+// 	min-height: 81px;
+// 	background-color: transparent;
+// 	position: relative;
+// 	margin-right: -10000px;
+// 	left: 405px;
+// }
+//
+// #u14966
+// {
+// 	width: 110px;
+// 	border-width: 0px;
+// 	border-color: transparent;
+// 	background-color: transparent;
+// 	border-radius: 4px;
+// 	padding-bottom: 53px;
+// 	position: relative;
+// }
+//
+// #u14966.MuseMenuActive
+// {
+// 	border-width: 0px;
+// 	border-color: transparent;
+// 	background-color: #F6F6DB;
+// 	border-radius: 0px;
+// 	width: 110px;
+// 	min-height: 0px;
+// 	margin: 0px;
+// }
+//
+// #u14968-4
+// {
+// 	width: 94px;
+// 	min-height: 28px;
+// 	border-width: 0px;
+// 	border-color: transparent;
+// 	background-color: transparent;
+// 	color: #236406;
+// 	text-align: center;
+// 	font-size: 23px;
+// 	font-family: source-sans-pro, sans-serif;
+// 	font-weight: 400;
+// 	position: relative;
+// 	margin-right: -10000px;
+// 	top: 26px;
+// 	left: 8px;
+// }
+//
+// #u14966:hover #u14968-4
+// {
+// 	padding-top: 0px;
+// 	padding-bottom: 0px;
+// 	min-height: 28px;
+// 	width: 94px;
+// 	margin: 0px -10000px 0px 0px;
+// }
+//
+// #u14971.MuseMenuActive #u14972-4,#u14966.MuseMenuActive #u14968-4
+// {
+// 	border-width: 0px;
+// 	border-color: transparent;
+// 	padding-top: 0px;
+// 	padding-bottom: 0px;
+// 	min-height: 28px;
+// 	width: 94px;
+// 	margin: 0px -10000px 0px 0px;
+// }
+//
+// #u14966:hover #u14968-4 p
+// {
+// 	font-family: source-sans-pro, sans-serif;
+// 	font-weight: 400;
+// 	font-style: normal;
+// }
+//
+// #u14992.MuseMenuActive #u14994-4 p,#u14978.MuseMenuActive #u14979-4 p,#u14971.MuseMenuActive #u14972-4 p,#u14985.MuseMenuActive #u14987-4 p,#u14966.MuseMenuActive #u14968-4 p
+// {
+// 	color: #E74C3C;
+// 	visibility: inherit;
+// 	font-family: source-sans-pro, sans-serif;
+// 	font-weight: 300;
+// 	font-style: normal;
+// }
+//
+// .MenuItem /* unifiedNavBar */
+// {
+// 	cursor: pointer;
+// }
+//
+// #pu9286
+// {
+// 	width: 0.01px;
+// 	margin-left: -100px;
+// 	margin-top: -48px;
+// }
+//
+// #u9286
+// {
+// 	z-index: 4;
+// 	min-height: 147px;
+// 	padding-bottom: 1px;
+// 	background: #000000 url("../images/wood%20line.jpg") no-repeat left top;
+// }
+//
+// #u9295
+// {
+// 	z-index: 6;
+// 	width: 629px;
+// 	border-width: 0px;
+// 	border-color: transparent;
+// 	background-color: transparent;
+// 	position: relative;
+// 	margin-right: -10000px;
+// 	margin-top: 38px;
+// 	left: 265px;
+// }
+//
+// #u9296-4
+// {
+// 	z-index: 7;
+// 	display: block;
+// 	vertical-align: top;
+// 	position: relative;
+// 	margin-right: -10000px;
+// }
+//
+// .js body
+// {
+// 	visibility: hidden;
+// }
+//
+// .js body.initialized
+// {
+// 	visibility: visible;
+// }
+//
+// #u9286-bw
+// {
+// 	z-index: 4;
+// 	min-height: 147px;
+// 	margin-top: 625px;
+// }
+//
+// #u9292
+// {
+// 	z-index: 5;
+// 	height: 12px;
+// 	background-color: #00E016;
+// 	opacity: 0.44;
+// 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=44)";
+// 	filter: alpha(opacity=44);
+// }
+//
+// #u9292-bw
+// {
+// 	z-index: 5;
+// 	margin-top: 626px;
+// 	height: 12px;
+// }
+//
+// #u9126
+// {
+// 	z-index: 11;
+// 	min-height: 541px;
+// 	border-width: 0px;
+// 	border-color: transparent;
+// 	padding-bottom: 101px;
+// 	background: #FFFFFF url("../images/submitpage.jpg") repeat center top;
+// }
+//
+// #u9286_align_to_page,#u9126_align_to_page
+// {
+// 	margin-left: auto;
+// 	margin-right: auto;
+// 	position: relative;
+// 	width: 960px;
+// 	left: -100px;
+// }
+//
+// #applynowtop
+// {
+// 	position: relative;
+// 	width: 22px;
+// 	margin-right: -10000px;
+// 	margin-top: 523px;
+// }
+//
+// #u9126-bw
+// {
+// 	z-index: 11;
+// 	min-height: 541px;
+// }
+//
+// #u9136
+// {
+// 	z-index: 2;
+// 	height: 834px;
+// 	background-color: #FFFFFF;
+// }
+//
+// #u9136-bw
+// {
+// 	z-index: 2;
+// 	margin-top: 48px;
+// 	height: 834px;
+// }
+//
+// #u3111
+// {
+// 	z-index: 3;
+// 	height: 865px;
+// 	border-width: 0px;
+// 	border-color: transparent;
+// 	background-color: #FFFFFF;
+// }
+//
+// #u3111-bw
+// {
+// 	z-index: 3;
+// 	position: fixed;
+// 	left: 0px;
+// 	right: 0px;
+// 	top: 1298px;
+// }
+//
+// #u1647
+// {
+// 	z-index: 12;
+// 	height: 196px;
+// }
+//
+// #u1647-bw
+// {
+// 	z-index: 12;
+// 	position: fixed;
+// 	left: 0px;
+// 	right: 0px;
+// 	top: 2164px;
+// }
+//
+// #pu4279
+// {
+// 	width: 0.01px;
+// 	margin-left: -22px;
+// 	margin-top: 462px;
+// }
+//
+// #u4279
+// {
+// 	z-index: 13;
+// 	width: 268px;
+// 	position: relative;
+// 	margin-right: -10000px;
+// }
+//
+// #u7861-5
+// {
+// 	z-index: 15;
+// 	width: 337px;
+// 	position: relative;
+// 	margin-right: -10000px;
+// 	margin-top: 28px;
+// 	left: 347px;
+// }
+//
+// #muse_css_mq,.html
+// {
+// 	background-color: #FFFFFF;
+// }
+//
+// body
+// {
+// 	position: relative;
+// 	min-width: 960px;
+// }

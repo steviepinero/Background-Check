@@ -39,6 +39,21 @@ class RecordChecksController < ApplicationController
 #byebug
 p @parsed
   p approval
+
+
+  # @record_check = RecordCheck.new(record_check_params)
+  #
+  # respond_to do |format|
+  #   if @record_check.save
+  #     format.html { redirect_to @record_check, notice: 'Record check was successfully created.' }
+  #     format.json { render :show, status: :created, location: @record_check }
+  #   else
+  #     format.html { render :new }
+  #     format.json { render json: @record_check.errors, status: :unprocessable_entity }
+  #   end
+  # end
+
+
   end
 
 def approval
@@ -54,5 +69,24 @@ def approval
 end
 
 
+
+def index
+  @record_check = RecordCheck.all
+end
+
+# def show
+# end
+
+
+private
+  # Use callbacks to share common setup or constraints between actions.
+  def set_record_check
+    @record_check = RecordCheck.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def record_check_params
+    params.require(:record_check).permit(:first_name, :middle_name, :last_name, :address, :city, :state, :zip, :county, :DOB, :ageMin, :ageMax, :limit, :exactMatch)
+  end
 
 end
