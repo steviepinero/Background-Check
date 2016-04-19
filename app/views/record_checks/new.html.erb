@@ -1,167 +1,227 @@
-<!DOCTYPE html>
-<html class="nojs html" lang="en-US">
- <head>
-  <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
-  <link media="only screen and (max-width: 370px)" rel="alternate" href="http://www.pet.com/phone/index.html"/>
-  <meta name="generator" content="2015.1.2.344"/>
-  <title>Apply Now</title>
-  <!-- CSS -->
-  <!-- <link rel="stylesheet" type="text/css" href="assets/stylesheets/site_global.css"/>
-  <link rel="stylesheet" type="text/css" href="assets/stylesheets/master_b-master-subpage.css?117405313"/>
-  <link rel="stylesheet" type="text/css" href="css/index.css?4101335127" id="pagesheet"/> -->
-  <!-- IE-only CSS -->
-  <!--[if lt IE 9]>
-  <link rel="stylesheet" type="text/css" href="css/iefonts_index.css?4063961326"/>
-  <![endif]-->
-  <!-- Other scripts -->
-  <!-- JS includes -->
-  <!--[if lt IE 9]>
-  <script src="scripts/html5shiv.js?4241844378" type="text/javascript"></script>
-  <![endif]-->
-   </head>
- <body>
-
-  <div class="clearfix" id="page"><!-- column -->
-   <div class="position_content" id="page_position_content">
-    <div class="clearfix colelem" id="pu9127"><!-- group -->
-     <div id="u9127"><!-- simple frame --></div>
-     <div class="browser_width" id="u9139-bw">
-      <div id="u9139"><!-- simple frame --></div>
-     </div>
-     <div id="u9140"><!-- simple frame --></div>
-     <div class="clip_frame" id="u9172"><!-- image -->
-      <%= image_tag "fidologo.png"%>
-     </div>
-     <div class="shadow gradient" id="u9174"><!-- simple frame --></div>
-     <a class="nonblock nontext anim_swing" id="u9175-4" href="index.html#applynowtop"><!-- rasterized frame --><%= image_tag "u9175-4.png", id:"u9175-4_img"%></a>
-     <nav class="MenuBar clearfix" id="menuu14962"><!-- horizontal box -->
-      <div class="MenuItemContainer clearfix grpelem" id="u14991"><!-- vertical box -->
-       <div class="MenuItem MenuItemWithSubMenu rounded-corners clearfix colelem" id="u14992"><!-- horizontal box -->
-        <div class="MenuItemLabel NoWrap clearfix grpelem" id="u14994-4"><!-- content -->
-         <p>ABOUT</p>
-        </div>
-       </div>
-      </div>
-      <div class="MenuItemContainer clearfix grpelem" id="u14977"><!-- vertical box -->
-       <div class="MenuItem MenuItemWithSubMenu rounded-corners clearfix colelem" id="u14978"><!-- horizontal box -->
-        <div class="MenuItemLabel NoWrap clearfix grpelem" id="u14979-4"><!-- content -->
-         <p>APPLY</p>
-
-         <p><ul><%= form_for(@record_check) do |f| %>
-           <li><%= f.text_field :first_name, :placeholder => "First Name" %></li>
-           <li><%= f.text_field :last_name, :placeholder => "Last Name" %></li>
-           <li><%= f.text_field :middle_name, :placeholder => "Middle Name (optional)" %></li>
-           <li><%= f.text_field :address, :placeholder => "Address (optional)" %></li>
-           <li><%= f.text_field :city, :placeholder => "City (optional)" %></li>
-           <li><%= f.text_field :state, :placeholder => "State (optional)" %></li>
-           <li><%= f.text_field :zip, :placeholder => "Zip Code (optional)" %></li>
-           <li><%= f.text_field :county, :placeholder => "County (optional)" %></li>
-           <li><%= f.date_select :dob, {order: [:month, :day, :year], prompt: { day: 'Select day', month: 'Select month', year: 'Select year' }, start_year: Date.today.year - 18, end_year: Date.today.year - 100}, {required: true} %></li>
-           <div class="actions">
-             <li><%= f.submit "Get Background Check", class: "btn-submit" %></li>
-           </div>
-         <% end %></ul>
-       </p>
+       <!DOCTYPE html>
+       <html xmlns="http://www.w3.org/1999/xhtml">
+       <head>
+           <title>One page website template for multipurpose website</title>
+             <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
+           <meta charset="utf-8" />
+            <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon" />
+           <meta name="robots" content="index, follow" />
+           <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+           <meta http-equiv="content-language" content="en" />
+           <meta name="keywords" content="mz,mzcreatives,creatives,template,website,onepage,webdesign,portfolio,build website,themeforest" />
+           <meta name="description" content="Now you can buy or use template from themeforest design by mzcreatives" />
+           <meta property="og:title" content="One page website template for multipurpose website" />
 
 
-        </div>
+            <!---Common css---->
+               <link href="assets/stylesheets/common.css" rel="stylesheet" type="text/css" />
+               <!----Media queries css--->
+                <link href="assets/stylesheets/style.css" type="text/css" rel="stylesheet" />
+                <link href="assets/stylesheets/theme1024.css" rel="stylesheet" type="text/css" />
+               <link href="assets/stylesheets/theme990.css" rel="stylesheet" type="text/css" />
+               <link href="assets/stylesheets/theme768.css" rel="stylesheet" type="text/css" />
+               <link href="assets/stylesheets/theme480.css" rel="stylesheet" type="text/css" />
+               <link href="assets/stylesheets/theme320.css" rel="stylesheet" type="text/css" />
+               <link href="assets/stylesheets/theme319.css" rel="stylesheet" type="text/css" />
+           <link href="assets/stylesheets/quickweb.css" rel="stylesheet" type="text/css" />
+            <!-- <link href="fonts/style.css" rel="stylesheet" type="text/css" /> -->
+          <link href="assets/stylesheets/slider_css.css" type="text/css" rel="stylesheet" />
+           <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,700,900' rel='stylesheet' type='text/css'/>
+
+
+           <script src="assets/javascripts/jquery-ui.js"></script>
+           <script src="assets/javascripts/jquery-1.11.3.min.js"></script>
+           <script src="assets/javascripts/slider.js"></script>
+           <script src="assets/javascripts/plugin.js"></script>
+       </head>
+       <body>
+           <div class="main">
+                           <header class="header">
+                       <div class="container">
+                           <div class="col-12">
+                           <div class="col-4 mb-11 logo-set">
+                               <div class="logo"><%= image_tag "petlogo.png"%></div>
+
+                           </div>
+
+                           <nav class="mob-menu-icon mb-1">
+                               <span class="icon-bar"></span>
+                               <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                          </nav>
+
+
+                           <nav class="col-8 menu mob-menu pull-right">
+
+                                <nav class="mob-menu-icon" style="padding: 26px 26px;width: 100%;box-sizing: border-box;border-bottom:2px solid #1565C0; ">
+
+                               <span class="icon-bar slide-icon-menu-color"></span>
+                               <span class="icon-bar slide-icon-menu-color"></span>
+                               <span class="icon-bar slide-icon-menu-color"></span>
+
+                           </nav>
+                              <!-- <div class="menu-item-box center "><a href="#" class="menu_link">Home</a>
+
+                                   <div class="sub_cata" style="height: 200px;position: absolute;z-index: 99999;background-color: #000;margin-top: 29px;">
+                                       Test sub cata
+
+                                   </div>
+
+                               </div>-->
+                               <div class="menu-item-box center "><a href="#HOME" class="menu-link">HOME</a></div>
+                               <div class="menu-item-box center "><a href="#about" class="menu-link">PROCESS</a></div>
+                               <div class="menu-item-box center "><a href="#services" class="menu-link">PARTNERS</a></div>
+                               <div class="menu-item-box center "><a href="#services" class="menu-link">VERIFICATION</a></div>
+                               <div class="menu-item-box center "><a href="#portfolio" class="menu-link">CONTACT</a></div>
+
+
+
+                               </nav>
+
+
+
+
+
+                           </div>
+                               </div>
+                   </header>
+               <section class="banner top" id="home" style="background-image:url(image/banner1.jpg);">
+               <div class="texture">
+               <div class="container">
+                  <div class="col-5 mb-12 mb-center banner-box">
+
+                      <div class="banner_line1"><%= image_tag "Untitled-2.png"%></div>
+                      <div class="banner_brief_text">TEXT TEXT TEXT</div>
+                      <div    class="mb-center mb-12"></div>
+                  </div>
+                   <div class="col-7 mb-12 banner-image"  style="position:relative;"><!--<img src="image/banner2_image.png"  />--></div>
+               </div>
+                   </div>
+              <!--  <div class="col-12 banner-extra-div color-black-s-light">
+
+           </div>-->
+           </section>
+
+
+           <section class="choose-theme section-padding color-white"  id="about">
+               <div class="container">
+                   <div class="main-title font-color-m-light">Step 1</div>
+                   <p class="main-content">   <p><ul><%= form_for(@record_check) do |f| %>
+                        <li><%= f.text_field :first_name, :placeholder => "First Name" %></li>
+                        <li><%= f.text_field :last_name, :placeholder => "Last Name" %></li>
+                        <li><%= f.text_field :middle_name, :placeholder => "Middle Name (optional)" %></li>
+                        <li><%= f.text_field :address, :placeholder => "Address (optional)" %></li>
+                        <li><%= f.text_field :city, :placeholder => "City (optional)" %></li>
+                        <li><%= f.text_field :state, :placeholder => "State (optional)" %></li>
+                        <li><%= f.text_field :zip, :placeholder => "Zip Code (optional)" %></li>
+                        <li><%= f.text_field :county, :placeholder => "County (optional)" %></li>
+                        <li><%= f.date_select :dob, {order: [:month, :day, :year], prompt: { day: 'Select day', month: 'Select month', year: 'Select year' }, start_year: Date.today.year - 18, end_year: Date.today.year - 100}, {required: true} %></li>
+                        <div class="actions">
+                          <li><%= f.submit "Get Background Check", class: "btn-submit" %></li>
+                        </div>
+                      <% end %></ul></p>
+                   <div class="col-4 padding-lr" style="box-sizing:border-box;" >
+                       <div class="sub-title font-color-s-light">Text Box</div>
+
+                       <div class="content-box" style=""> Use this if you need it              </div>
+                       <a href="#services">
+                     <div class="view-template" >Apply Button</div></a>
+                   </div>
+
+                   </div>
+
+           </section>
+           <section class="service section-padding color-white" id="services"></section>
+
+           <section class="team section-padding color-light-white" id="team"></section>
+
+
+               <!--<section class="key-feature section-padding color-white">
+               <div class="container">
+                     <div class="main-title font-color-m-light">Features for Your Online Business</div>
+                   <p class="main-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae nibh nisl. Cras et mauris eget lorem ultricies ferme ntum a in diam. </p>
+
+                   <div class="col-5  padding-lr" >
+                      <div class="col-12 feature-box" style="padding:5px 0px;">
+                          <div class="col-2 feature-icon"><i class="quickweb-icon-monitor"></i></div>
+                          <div class="col-10 content-box">
+                              <div class="feature-name">Resposive design</div>
+                               <div class="feature-content">Cras tempus orci massa, id hendrerit mi egestas vitae class aptent taciti.</div>
+                              </div>
+
+                      </div>
+
+                       <div class="col-12 feature-box" style="padding:5px 0px;">
+
+                          <div class="col-2 feature-icon"><i class="quickweb-icon-chart-pie-1"></i></div>
+                        <div class="col-10 content-box">
+                              <div class="feature-name">Easy Customization</div>
+                               <div class="feature-content">Cras tempus orci massa, id hendrerit mi egestas vitae class aptent taciti.</div>
+                              </div>
+                      </div>
+
+                         <div class="col-12 feature-box" style="padding:5px 0px;">
+                          <div class="col-2 feature-icon"><i class="quickweb-icon-sliders"></i></div>
+                         <div class="col-10 content-box">
+                              <div class="feature-name">Step to Step Guide</div>
+                               <div class="feature-content">Cras tempus orci massa, id hendrerit mi egestas vitae class aptent taciti.</div>
+                              </div>
+                      </div>
+                       <div class="col-12 feature-box" style="padding:5px 0px;">
+                          <div class="col-2 feature-icon"><i class="quickweb-icon-cloud-1"></i></div>
+                         <div class="col-10 content-box">
+                              <div class="feature-name">Secure and Reliable</div>
+                               <div class="feature-content">Cras tempus orci massa, id hendrerit mi egestas vitae class aptent taciti.</div>
+                              </div>
+                      </div>
+
+                   </div>
+
+                   <div class="col-7" style="">
+                       <div class="col-12 feature-img center" style="">
+                       <img src="image/monitor.png" /></div>
+                   </div>
+               </div>
+           </section>-->
+
+             <section class="contact-address section-padding color-light-white"></section>
+
+           <section class="contact section-padding color-white"></section>
+
+               <section class="footer">
+
+                   <div class="bottom-footer">
+                       <div class="container">
+                         <div class="col-12 creator" style="padding-top:25px;">
+                       <div class="col-6 copyright">© 2016 All Rights Reserved by Petverify.org</div>
+                       <div class="col-6 design-by">
+                           <div class="col-8" style="color: #E5E5E5;font-weight: 100;font-size: 15px;"></div>
        </div>
-      </div>
-      <div class="MenuItemContainer clearfix grpelem" id="u14970"><!-- vertical box -->
-       <div class="MenuItem MenuItemWithSubMenu rounded-corners clearfix colelem" id="u14971"><!-- horizontal box -->
-        <div class="MenuItemLabel NoWrap clearfix grpelem" id="u14972-4"><!-- content -->
-         <p>PROCESS</p>
-        </div>
-       </div>
-      </div>
-      <div class="MenuItemContainer clearfix grpelem" id="u14984"><!-- vertical box -->
-       <div class="MenuItem MenuItemWithSubMenu rounded-corners clearfix colelem" id="u14985"><!-- horizontal box -->
-        <div class="MenuItemLabel NoWrap clearfix grpelem" id="u14987-4"><!-- content -->
-         <p>PARTNERS</p>
-        </div>
-       </div>
-      </div>
-      <div class="MenuItemContainer clearfix grpelem" id="u14963"><!-- vertical box -->
-       <div class="MenuItem MenuItemWithSubMenu rounded-corners clearfix colelem" id="u14966"><!-- horizontal box -->
-        <div class="MenuItemLabel NoWrap clearfix grpelem" id="u14968-4"><!-- content -->
-         <p>CONTACT</p>
-        </div>
-       </div>
-      </div>
-     </nav>
-    </div>
-    <div class="clearfix colelem" id="pu9286"><!-- group -->
-     <div class="browser_width grpelem" id="u9286-bw">
-      <div id="u9286"><!-- group -->
-       <div class="clearfix" id="u9286_align_to_page">
-        <div class="clearfix grpelem" id="u9295"><!-- group -->
-       <%= image_tag "u9296-4.png", id:"u9296-4"%><!-- rasterized frame -->
-        </div>
-       </div>
-      </div>
-     </div>
-     <div class="browser_width grpelem" id="u9292-bw">
-      <div id="u9292"><!-- simple frame --></div>
-     </div>
-     <div class="browser_width grpelem" id="u9126-bw">
-      <div id="u9126"><!-- group -->
-       <div class="clearfix" id="u9126_align_to_page">
-        <a class="anchor_item grpelem" id="applynowtop"></a>
-       </div>
-      </div>
-     </div>
-    </div>
-    <div class="browser_width colelem" id="u9136-bw">
-     <div id="u9136"><!-- simple frame --></div>
-    </div>
-    <div class="browser_width mse_pre_init" id="u3111-bw">
-     <div id="u3111"><!-- simple frame --></div>
-    </div>
-    <div class="verticalspacer"></div>
-    <div class="browser_width mse_pre_init" id="u1647-bw">
-     <div id="u1647"><!-- simple frame --></div>
-    </div>
-    <div class="clearfix colelem" id="pu4279"><!-- group -->
-     <div class="clip_frame grpelem" id="u4279"><!-- image -->
-       <%= image_tag "petlogo1white.png", id:"u4279_img"%>
-     </div>
-     <div class="bodytext-gray footer-link clearfix grpelem" id="u7861-5"><!-- content -->
-      <p><a class="nonblock" href="http://www.muse-themes.com" target="_blank"><span id="u7861">© Pet Verify - All Rights Reserved</span></a></p>
-     </div>
-    </div>
-   </div>
-  </div>
-  <!-- JS includes -->
-  <!-- <script type="text/javascript">
-   if (document.location.protocol != 'https:') document.write('\x3Cscript src="http://musecdn2.businesscatalyst.com/scripts/4.0/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
-</script>
-  <script type="text/javascript">
-   window.jQuery || document.write('\x3Cscript src="scripts/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
-</script>
-  <script src="scripts/museutils.js?3790713428" type="text/javascript"></script>
-  <script src="scripts/whatinput.js?84559013" type="text/javascript"></script>
-  <script src="scripts/jquery.musemenu.js?238543590" type="text/javascript"></script>
-  <script src="scripts/jquery.watch.js?4244854265" type="text/javascript"></script>
-  <script src="scripts/jquery.scrolleffects.js?4219894366" type="text/javascript"></script>
-  <!-- Other scripts -->
-  <!-- <script type="text/javascript">
-   $(document).ready(function() { try {
-(function(){var a={},b=function(a){if(a.match(/^rgb/))return a=a.replace(/\s+/g,"").match(/([\d\,]+)/gi)[0].split(","),(parseInt(a[0])<<16)+(parseInt(a[1])<<8)+parseInt(a[2]);if(a.match(/^\#/))return parseInt(a.substr(1),16);return 0};(function(){$('link[type="text/css"]').each(function(){var b=($(this).attr("href")||"").match(/\/?css\/([\w\-]+\.css)\?(\d+)/);b&&b[1]&&b[2]&&(a[b[1]]=b[2])})})();(function(){$("body").append('<div class="version" style="display:none; width:1px; height:1px;"></div>');
-for(var c=$(".version"),d=0;d<Muse.assets.required.length;){var f=Muse.assets.required[d],g=f.match(/([\w\-\.]+)\.(\w+)$/),k=g&&g[1]?g[1]:null,g=g&&g[2]?g[2]:null;switch(g.toLowerCase()){case "css":k=k.replace(/\W/gi,"_").replace(/^([^a-z])/gi,"_$1");c.addClass(k);var g=b(c.css("color")),h=b(c.css("background-color"));g!=0||h!=0?(Muse.assets.required.splice(d,1),"undefined"!=typeof a[f]&&(g!=a[f]>>>24||h!=(a[f]&16777215))&&Muse.assets.outOfDate.push(f)):d++;c.removeClass(k);break;case "js":k.match(/^jquery-[\d\.]+/gi)&&
-typeof $!="undefined"?Muse.assets.required.splice(d,1):d++;break;default:throw Error("Unsupported file type: "+g);}}c.remove();if(Muse.assets.outOfDate.length||Muse.assets.required.length)c="Some files on the server may be missing or incorrect. Clear browser cache and try again. If the problem persists please contact website author.",(d=location&&location.search&&location.search.match&&location.search.match(/muse_debug/gi))&&Muse.assets.outOfDate.length&&(c+="\nOut of date: "+Muse.assets.outOfDate.join(",")),d&&Muse.assets.required.length&&(c+="\nMissing: "+Muse.assets.required.join(",")),alert(c)})()})();
-/* body */
-Muse.Utils.transformMarkupToFixBrowserProblemsPreInit();/* body */
-Muse.Utils.prepHyperlinks(true);/* body */
-Muse.Utils.resizeHeight('.browser_width');/* resize height */
-Muse.Utils.requestAnimationFrame(function() { $('body').addClass('initialized'); });/* mark body as initialized */
-Muse.Utils.fullPage('#page');/* 100% height page */
-Muse.Utils.initWidget('.MenuBar', ['#bp_infinity'], function(elem) { return $(elem).museMenu(); });/* unifiedNavBar */
-$('#u9126').registerBackgroundPositionScrollEffect([{"speed":[0,0],"in":[-Infinity,182.7]},{"speed":[0,0],"in":[182.7,Infinity]}]);/* scroll effect */
-$('#u3111-bw').registerPositionScrollEffect([{"speed":[null,0.5],"in":[-Infinity,734.15]},{"speed":[null,0.5],"in":[734.15,Infinity]}]);/* scroll effect */
-$('#u1647-bw').registerPositionScrollEffect([{"speed":[null,1],"in":[-Infinity,2164.05]},{"speed":[null,1],"in":[2164.05,Infinity]}]);/* scroll effect */
-Muse.Utils.showWidgetsWhenReady();/* body */
-Muse.Utils.transformMarkupToFixBrowserProblems();/* body */
-} catch(e) { if (e && 'function' == typeof e.notify) e.notify(); else Muse.Assert.fail('Error calling selector function:' + e); }});
-</script> -->
-   </body>
-</html>
+                    </div>
+                   </div>
+                   </div>
+               </section>
+
+               </div>
+           <script type="text/javascript">
+               thumb_slider({
+
+                   thumbs_to_show: 1,
+                   thumbs_to_move: 1,
+                   thumbs_width: 0,
+                   thumbs_count: 0,
+                   timeout: 10000,
+                   parent_id: "main_slider",
+                   container_class: "thumb_slider",
+                   thumb_class: "thumbs",
+                   spacing: 0,
+                   processing: false,
+                   hover: false,
+                   next_class: "next",
+                   prev_class: "prev",
+                   timer: setTimeout(function () { })
+
+               });
+           </script>
+       </body>
+       </html>
