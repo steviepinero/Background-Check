@@ -5,27 +5,11 @@
              <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
            <meta charset="utf-8" />
             <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon" />
-           <meta name="robots" content="index, follow" />
-           <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-           <meta http-equiv="content-language" content="en" />
-           <meta name="keywords" content="mz,mzcreatives,creatives,template,website,onepage,webdesign,portfolio,build website,themeforest" />
-           <meta name="description" content="Now you can buy or use template from themeforest design by mzcreatives" />
-           <meta property="og:title" content="One page website template for multipurpose website" />
 
 
             <!---Common css---->
-               <link href="assets/stylesheets/common.css" rel="stylesheet" type="text/css" />
+               <link href="assets/stylesheets/record_checks.scss" rel="stylesheet" type="text/css" />
                <!----Media queries css--->
-                <link href="assets/stylesheets/style.css" type="text/css" rel="stylesheet" />
-                <link href="assets/stylesheets/theme1024.css" rel="stylesheet" type="text/css" />
-               <link href="assets/stylesheets/theme990.css" rel="stylesheet" type="text/css" />
-               <link href="assets/stylesheets/theme768.css" rel="stylesheet" type="text/css" />
-               <link href="assets/stylesheets/theme480.css" rel="stylesheet" type="text/css" />
-               <link href="assets/stylesheets/theme320.css" rel="stylesheet" type="text/css" />
-               <link href="assets/stylesheets/theme319.css" rel="stylesheet" type="text/css" />
-           <link href="assets/stylesheets/quickweb.css" rel="stylesheet" type="text/css" />
-            <!-- <link href="fonts/style.css" rel="stylesheet" type="text/css" /> -->
-          <link href="assets/stylesheets/slider_css.css" type="text/css" rel="stylesheet" />
            <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,700,900' rel='stylesheet' type='text/css'/>
 
 
@@ -44,40 +28,6 @@
 
                            </div>
 
-                           <nav class="mob-menu-icon mb-1">
-                               <span class="icon-bar"></span>
-                               <span class="icon-bar"></span>
-                              <span class="icon-bar"></span>
-                          </nav>
-
-
-                           <nav class="col-8 menu mob-menu pull-right">
-
-                                <nav class="mob-menu-icon" style="padding: 26px 26px;width: 100%;box-sizing: border-box;border-bottom:2px solid #1565C0; ">
-
-                               <span class="icon-bar slide-icon-menu-color"></span>
-                               <span class="icon-bar slide-icon-menu-color"></span>
-                               <span class="icon-bar slide-icon-menu-color"></span>
-
-                           </nav>
-                              <!-- <div class="menu-item-box center "><a href="#" class="menu_link">Home</a>
-
-                                   <div class="sub_cata" style="height: 200px;position: absolute;z-index: 99999;background-color: #000;margin-top: 29px;">
-                                       Test sub cata
-
-                                   </div>
-
-                               </div>-->
-                               <div class="menu-item-box center "><a href="#HOME" class="menu-link">HOME</a></div>
-                               <div class="menu-item-box center "><a href="#about" class="menu-link">PROCESS</a></div>
-                               <div class="menu-item-box center "><a href="#services" class="menu-link">PARTNERS</a></div>
-                               <div class="menu-item-box center "><a href="#services" class="menu-link">VERIFICATION</a></div>
-                               <div class="menu-item-box center "><a href="#portfolio" class="menu-link">CONTACT</a></div>
-
-
-
-                               </nav>
-
 
 
 
@@ -85,13 +35,13 @@
                            </div>
                                </div>
                    </header>
-               <section class="banner top" id="home" style="background-image:url(image/banner1.jpg);">
+               <section class="banner-top" id="home">
                <div class="texture">
                <div class="container">
                   <div class="col-5 mb-12 mb-center banner-box">
 
                       <div class="banner_line1"><%= image_tag "Untitled-2.png"%></div>
-                      <div class="banner_brief_text">TEXT TEXT TEXT</div>
+                      <div class="banner_brief_text"></div>
                       <div    class="mb-center mb-12"></div>
                   </div>
                    <div class="col-7 mb-12 banner-image"  style="position:relative;"><!--<img src="image/banner2_image.png"  />--></div>
@@ -105,7 +55,7 @@
 
            <section class="choose-theme section-padding color-white"  id="about">
                <div class="container">
-                   <div class="main-title font-color-m-light">Step 1</div>
+                   <center><div class="main-title font-color-m-light">Step 1</div>
                    <p class="main-content">   <p><ul><%= form_for(@record_check) do |f| %>
                         <li><%= f.text_field :first_name, :placeholder => "First Name" %></li>
                         <li><%= f.text_field :last_name, :placeholder => "Last Name" %></li>
@@ -117,18 +67,18 @@
                         <li><%= f.text_field :county, :placeholder => "County (optional)" %></li>
                         <li><%= f.date_select :dob, {order: [:month, :day, :year], prompt: { day: 'Select day', month: 'Select month', year: 'Select year' }, start_year: Date.today.year - 18, end_year: Date.today.year - 100}, {required: true} %></li>
                         <div class="actions">
-                          <li><%= f.submit "Get Background Check", class: "btn-submit" %></li>
+                          <li><%= f.submit "Apply", class: "apply-button" %></li>
                         </div>
                       <% end %></ul></p>
                    <div class="col-4 padding-lr" style="box-sizing:border-box;" >
-                       <div class="sub-title font-color-s-light">Text Box</div>
+                       <div class="sub-title font-color-s-light"> </div>
 
-                       <div class="content-box" style=""> Use this if you need it              </div>
+                       <div class="content-box" style="">             </div>
                        <a href="#services">
-                     <div class="view-template" >Apply Button</div></a>
+                     </div></a>
                    </div>
 
-                   </div>
+                 </div></center>
 
            </section>
            <section class="service section-padding color-white" id="services"></section>
@@ -188,21 +138,9 @@
 
            <section class="contact section-padding color-white"></section>
 
-               <section class="footer">
 
-                   <div class="bottom-footer">
-                       <div class="container">
-                         <div class="col-12 creator" style="padding-top:25px;">
-                       <div class="col-6 copyright">© 2016 All Rights Reserved by Petverify.org</div>
-                       <div class="col-6 design-by">
-                           <div class="col-8" style="color: #E5E5E5;font-weight: 100;font-size: 15px;"></div>
-       </div>
-                    </div>
-                   </div>
-                   </div>
-               </section>
 
-               </div>
+
            <script type="text/javascript">
                thumb_slider({
 

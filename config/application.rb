@@ -22,5 +22,9 @@ module Backgroundcheck
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+    config.assets.enabled = true
+    config.assets.debug = true
+    config.assets.compile = true
+    config.serve_static_assets = false
   end
 end
