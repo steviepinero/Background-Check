@@ -14,6 +14,10 @@
  @import "bootstrap";
  @import "bootstrap";
 
+html {
+  padding-top: 5em;
+}
+
 /* navbar */
 
 .navbar-inverse { background-color: #FFFFFF}
@@ -48,7 +52,21 @@
 
 .banner-top {
   background-image: image-url("banner1.jpg");
-  height: 40em;
+  height: 50em;
+}
+
+.slogan {
+  z-index:100;
+ position:absolute;
+ color:white;
+ font-weight:bold;
+ left:150px;
+ top:350px;
+}
+
+.slogan h1 {
+  font-size:44px;
+
 }
 
 .about {
