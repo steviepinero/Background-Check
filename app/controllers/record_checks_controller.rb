@@ -70,8 +70,8 @@ def approval
      else
   p @deeper
    @decision = "approved"
-   @approval = generate_approval_code
-   p @approval
+   @approval_code = generate_approval_code
+   p @approval_code
      end
 end
 
