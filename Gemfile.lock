@@ -36,6 +36,8 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    animate-rails (1.0.9)
+      rails
     arel (6.0.3)
     autoprefixer-rails (6.3.3.1)
       execjs
@@ -154,11 +156,13 @@ GEM
       sprockets-rails (>= 2.0, < 4.0)
     wicked_pdf (1.0.6)
     wkhtmltopdf-binary (0.9.9.3)
+    wow-rails (0.0.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  animate-rails
   bcrypt (~> 3.1.7)
   bootstrap-sass (~> 3.3.6)
   byebug
@@ -180,6 +184,7 @@ DEPENDENCIES
   web-console (~> 2.0)
   wicked_pdf
   wkhtmltopdf-binary
+  wow-rails
 
 BUNDLED WITH
    1.11.2
