@@ -45,14 +45,14 @@ p @parsed
 
    @record_check = RecordCheck.new(record_check_params)
 
-  respond_to do |format|
-    if @record_check.save
-      format.html { redirect_to @record_check, notice: 'Record check was successfully created.' }
-      format.json { render :show, status: :created, location: @record_check }
-    else
-      format.html { render :new }
-      format.json { render json: @record_check.errors, status: :unprocessable_entity }
-    end
+  # respond_to do |format|
+  #   if @record_check.save
+  #     format.html { redirect_to @record_check, notice: 'Record check was successfully created.' }
+  #     format.json { render :show, status: :created, location: @record_check }
+  #   else
+  #     format.html { render :new }
+  #     format.json { render json: @record_check.errors, status: :unprocessable_entity }
+  #   end
   end
 
 
