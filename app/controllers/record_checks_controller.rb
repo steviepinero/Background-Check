@@ -10,7 +10,7 @@ class RecordChecksController < ApplicationController
 
 
   def create
-    @record_check = RecordCheck.new(record_check_params)
+
 
   @options = {
   :credentials => {
@@ -43,17 +43,17 @@ p @parsed
   p approval
 
 
-  # @record_check = RecordCheck.new(record_check_params)
-  #
-  # respond_to do |format|
-  #   if @record_check.save
-  #     format.html { redirect_to @record_check, notice: 'Record check was successfully created.' }
-  #     format.json { render :show, status: :created, location: @record_check }
-  #   else
-  #     format.html { render :new }
-  #     format.json { render json: @record_check.errors, status: :unprocessable_entity }
-  #   end
-  # end
+   @record_check = RecordCheck.new(record_check_params)
+
+  respond_to do |format|
+    if @record_check.save
+      format.html { redirect_to @record_check, notice: 'Record check was successfully created.' }
+      format.json { render :show, status: :created, location: @record_check }
+    else
+      format.html { render :new }
+      format.json { render json: @record_check.errors, status: :unprocessable_entity }
+    end
+  end
 
 
   end
@@ -69,6 +69,7 @@ def approval
      if @deeper.to_s.include? "ANIMAL" #asks if animal is included
   p @deeper
    @decision = "Not approved"
+   @approval_code = "not approved"
      else
   p @deeper
    @decision = "approved"
@@ -95,7 +96,7 @@ private
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def record_check_params
-    params.require(:record_check).permit(:first_name, :middle_name, :last_name, :address, :city, :state, :zip, :county, :DOB, :ageMin, :ageMax, :limit, :exactMatch)
+    params.require(:record_check).permit(:first_name, :middle_name, :last_name, :address, :city, :state, :zip, :county, :DOB, :ageMin, :ageMax, :limit, :exactMatch, :approval_code)
   end
 
 end

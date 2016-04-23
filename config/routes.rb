@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :record_checks
   resources :users
   resources :record_checks
   # The priority is based upon order of creation: first created -> highest priority.
