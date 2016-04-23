@@ -12,6 +12,20 @@
   <% end %>
 
   <div class="actions">
-    <%= f.submit %>
+    <p class="main-content"><ul><%= form_for(@record_check) do |f| %>
+         <li><%= f.text_field :first_name, :placeholder => "First Name" %></li>
+         <li><%= f.text_field :last_name, :placeholder => "Last Name" %></li>
+         <li><%= f.text_field :middle_name, :placeholder => "Middle Name" %></li>
+         <li><%= f.text_field :address, :placeholder => "Address" %></li>
+         <li><%= f.text_field :city, :placeholder => "City" %></li>
+         <li><%= f.text_field :state, :placeholder => "State" %></li>
+         <li><%= f.text_field :zip, :placeholder => "Zip Code" %></li>
+         <li><%= f.text_field :county, :placeholder => "County" %></li>
+         <li><%= f.date_field :dob, :placeholder => "Birthdate" %></li>
+         <div class="actions">
+           <li><%= f.submit "Apply", class: "apply-button" %></li>
+         </div>
+       <% end %></ul></p>
+
   </div>
 <% end %>

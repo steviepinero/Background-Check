@@ -56,20 +56,10 @@
            <section class="choose-theme section-padding color-white"  id="about">
                <div class="container">
                    <center><div class="main-title font-color-m-light">Step 1</div>
-                   <p class="main-content">   <p><ul><%= form_for(@record_check) do |f| %>
-                        <li><%= f.text_field :first_name, :placeholder => "First Name" %></li>
-                        <li><%= f.text_field :last_name, :placeholder => "Last Name" %></li>
-                        <li><%= f.text_field :middle_name, :placeholder => "Middle Name (optional)" %></li>
-                        <li><%= f.text_field :address, :placeholder => "Address (optional)" %></li>
-                        <li><%= f.text_field :city, :placeholder => "City (optional)" %></li>
-                        <li><%= f.text_field :state, :placeholder => "State (optional)" %></li>
-                        <li><%= f.text_field :zip, :placeholder => "Zip Code (optional)" %></li>
-                        <li><%= f.text_field :county, :placeholder => "County (optional)" %></li>
-                        <li><%= f.date_field :dob, :placeholder => "Birthdate" %></li>
-                        <div class="actions">
-                          <li><%= f.submit "Apply", class: "apply-button" %></li>
-                        </div>
-                      <% end %></ul></p>
+                   <p class="main-content">
+
+                      <%= render "form" %>
+                      under form</p>
                    <div class="col-4 padding-lr" style="box-sizing:border-box;" >
                        <div class="sub-title font-color-s-light"> </div>
 
