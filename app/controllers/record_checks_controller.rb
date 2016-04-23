@@ -1,5 +1,8 @@
 class RecordChecksController < ApplicationController
 attr_accessor :first_name, :last_name, :middle_name, :address, :city, :state, :zip, :county, :dob, :approval_code
+before_action :require_user
+
+
   def new
   @record_check = RecordCheck.new
   end

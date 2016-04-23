@@ -59,6 +59,7 @@ html {
 .banner-submit {
   background-image: image-url("submitpage.jpg");
   height: 50em;
+  
 }
 
 .slogan {
@@ -83,6 +84,7 @@ html {
 .divider-apply {
   background-image: image-url("woodline.jpg");
   height: 10em;
+
 }
 
 .divider-apply h1 {
@@ -90,6 +92,11 @@ html {
   color: white;
   padding-top: .5em;
   font-size: 5em;
+}
+
+.main-content {
+  position: absolute;
+   bottom: -100%;
 }
 
 .divider {
