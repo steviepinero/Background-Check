@@ -56,6 +56,11 @@ html {
   height: 50em;
 }
 
+.banner-submit {
+  background-image: image-url("submitpage.jpg");
+  height: 50em;
+}
+
 .slogan {
   z-index:100;
  position:absolute;
@@ -73,6 +78,18 @@ html {
 .about {
   height: 30em;
   margin-bottom: 3em;
+}
+
+.divider-apply {
+  background-image: image-url("woodline.jpg");
+  height: 10em;
+}
+
+.divider-apply h1 {
+  text-align: center;
+  color: white;
+  padding-top: .5em;
+  font-size: 5em;
 }
 
 .divider {

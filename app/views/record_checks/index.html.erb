@@ -10,10 +10,9 @@
   </thead>
 
   <tbody>
-    <% @record_checks.each do |record_check| %>
+    <% @record_check.each do |record_check| %>
       <tr>
         <td><%= link_to 'Show', record_check %></td>
-        <td><%= link_to 'Edit', edit_record_check_path(record_check) %></td>
         <td><%= link_to 'Destroy', record_check, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
