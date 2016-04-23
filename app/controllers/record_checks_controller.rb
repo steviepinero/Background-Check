@@ -10,6 +10,8 @@ class RecordChecksController < ApplicationController
 
 
   def create
+    @record_check = RecordCheck.new(record_check_params)
+
   @options = {
   :credentials => {
   :account_id => "128008",
