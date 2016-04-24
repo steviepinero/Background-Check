@@ -11,6 +11,20 @@
                <script>
                new WOW().init();
                </script>
+               <script>
+               $('a[href^="#"]').on('click', function(event) {
+
+                   var target = $( $(this).attr('href') );
+
+                   if( target.length ) {
+                       event.preventDefault();
+                       $('html, body').animate({
+                           scrollTop: target.offset().top
+                       }, 1000);
+                   }
+
+               });
+               </script>
    </head>
  <body>
 
@@ -57,7 +71,7 @@
         <%= link_to "Apply Now!", new_record_check_path, :class => "apply-button"  %></h1></center>
   </div>
 
-      <div class="about animated wow bounceInUp">
+      <div class="about animated wow bounceInUp" id="about">
         <center><h1>ABOUT US</h1>
         <h2>We Are A Voice For Those Who Have None</h2></center><br>
         <p class="col-md-6 wow bounceInUp">
@@ -75,7 +89,7 @@ Headquartered in Lynchburg, Virginia, PetVerify.org maintains a strong presence 
 
      </div>
 
-      <div class="process about wow slideInUp">
+      <div class="process about wow slideInUp" id="process">
         <center><h1>Process</h1>
         <h2>The PetVerify™ Process</h2></center><br>
         <p class="col-md-6">
