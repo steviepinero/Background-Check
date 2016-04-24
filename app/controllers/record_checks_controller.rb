@@ -80,7 +80,7 @@ def approval
    @decision = "approved"
    @approval_code = SecureRandom.hex(6)
    p @approval_code
-   redirect_to  :action => 'show'
+  #  redirect_to  :action => 'show'
 
      end
 end
