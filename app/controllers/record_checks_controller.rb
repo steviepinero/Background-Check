@@ -80,6 +80,7 @@ def approval
    @decision = "approved"
    @approval_code = SecureRandom.hex(6)
    p @approval_code
+   redirect_to  :action => 'show'
 
      end
 end
@@ -90,8 +91,22 @@ def index
   @record_check = RecordCheck.all
 end
 
-# def show
-# end
+def show
+  # respond_to do |format|
+  # format.pdf do
+  #   @approval_text = "#{@approval_code}"
+  #   render :pdf => "approved",
+  #          :template => 'record_checks/show.pdf.erb',
+  #          :layout => 'pdf',
+  #          :footer => {
+  #            :center => "Center",
+  #            :left => "Left",
+  #            :right => "Right"
+  #          }
+      #    end
+      #  end
+
+end
 
 
 private

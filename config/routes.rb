@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   get  'record_checks' => 'record_checks#new'
   post 'record_checks/create' => 'record_checks#create'
 
+  get 'record_checks/show', to: 'record_checks#show'
+
   get 'signup' => 'users#new'
    resources :users
 
