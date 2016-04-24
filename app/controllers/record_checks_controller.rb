@@ -75,12 +75,13 @@ def approval
   p @deeper
    @decision = "Not approved"
    @approval_code = "not approved"
+     redirect_to  :action => 'show'
      else
   p @deeper
    @decision = "approved"
    @approval_code = SecureRandom.hex(6)
    p @approval_code
-  #  redirect_to  :action => 'show'
+
 
      end
 end
