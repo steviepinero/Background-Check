@@ -23,8 +23,8 @@
      <div class="grpelem" id="u329"><!-- simple frame --></div>
     </div>
     <div class="Woodchuck---Company---Text clearfix grpelem" id="u376-4"><!-- content -->
-  
-     <p><a><%= link_to "New Application", new_record_check_path %></a>
+
+     <p><a><%= link_to "Apply", new_record_check_path %></a>
        <% if current_user %>
         <li><%= current_user.name %></li>
         <li><%= link_to "Log out", logout_path, method: "delete" %></li>
@@ -53,7 +53,8 @@
     <%= image_tag "PETBIGLOGO.png"%>
     <center><h1>The Only<br>
        Universal Pet<br> Adoption<br>
-        Application. </h1></center>
+        Application.<br>
+        <%= link_to "Apply Now!", new_record_check_path, :class => "apply-button"  %></h1></center>
   </div>
 
       <div class="about animated wow bounceInUp">
