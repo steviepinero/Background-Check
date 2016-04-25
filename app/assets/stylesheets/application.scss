@@ -51,13 +51,18 @@ html {
 }
 
 
+
 .banner-top {
   background-image: image-url("banner1.jpg");
+  background-size:cover;
+  background-repeat: no-repeat;
   height: 50em;
 }
 
 .banner-submit {
   background-image: image-url("submitpage.jpg");
+  background-size:cover;
+  background-repeat: no-repeat;
   height: 50em;
 
 }
@@ -134,6 +139,9 @@ html {
   background-color: black;
   font: gray;
   height: 10em;
+  bottom: 0;
+
+
 }
 
 // approval page
