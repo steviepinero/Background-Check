@@ -1,6 +1,7 @@
 
 <div class="document">
   <div class="acceptance">
+    <%#= @parsed %>
     <p> Thank you for using PetVerify. Please retain this form for your records.<br><br>
 
       Below is your approval code. You will need this to submit your approval to your adopting agency. Print this form out and submit it in person to your adopting agency, or provide it online to your adopting agency website. <br><br>
@@ -19,17 +20,3 @@
 
   </div>
 </div>
-
-
-
-<!-- #returns the Description -->
-
- <%# @parsed.extend Hashie::Extensions::DeepFind %>
-<%# deeper = @parsed.deep_find(:Description) %>
-<%# if deeper.any? {|k, v| v.include? "ANIMAL"}  #asks if animal is included %>
-  <%#= deeper %>
-  <%#= "Not approved" %>
-<%# else %>
-  <%#= deeper %>
-  <%#="approved" %>
-<%# end %>
