@@ -1,9 +1,9 @@
-== PetVerify
+
 
 
 
 * Get background check info about user from api
 
-* assign a score to different crimes{anything with animal = no}
+* assign a score to different crimes
 
 * approve or deny based on that score
