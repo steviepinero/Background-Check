@@ -50,11 +50,11 @@
              <li><%= f.text_field :county, :placeholder => "County" %></li>
              <li><%= f.date_field :dob, :placeholder => "Birthdate" %></li>
              <div class="actions">
-               <li><%= f.submit "Apply", class: "btn btn-primary" %></li>
+               <li><%= f.submit "Apply", class: "btn btn-default" %></li>
              </div>
            <% end %></ul></p></center>
            <% else %>
-           <center><li><%= link_to "Login", 'login' %></a></li></center>
+           <center><li><%= link_to "Login", 'login',class: "btn btn-default" %></a></li></center>
            <% end %>
     </div>
 
