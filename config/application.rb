@@ -24,7 +24,7 @@ module Backgroundcheck
     config.active_record.raise_in_transactional_callbacks = true
     config.assets.enabled = true
     config.assets.debug = true
-    config.assets.compile = true
+    config.assets.compile = false
     config.serve_static_assets = false
   end
 end
