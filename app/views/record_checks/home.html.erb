@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Simple Check</title>
+  </head>
+  <body>
+    <center><h1> The Little Background Checker </h1><br><br><br>
+
+    <div class="col-md-4 how">
+      <img src="http://i.imgur.com/SQJsa1H.png"></img>
+      <p>Bulbasaur Ivysaur Venusaur Charmander Charmeleon Charizard Squirtle Wartortle Blastoise Caterpie Metapod Butterfree Weedle Kakuna Beedrill Pidgey</p>
+    </div>
+
+    <div class="col-md-4 why">
+      <img src="http://i.imgur.com/BbmT56A.png"></img>
+      <p>Bulbasaur Ivysaur Venusaur Charmander Charmeleon Charizard Squirtle Wartortle Blastoise Caterpie Metapod Butterfree Weedle Kakuna Beedrill Pidgey</p>
+    </div>
+
+    <div class="col-md-4 time">
+      <img src="http://i.imgur.com/4sMRxO8.png"></img>
+      <p>Bulbasaur Ivysaur Venusaur Charmander Charmeleon Charizard Squirtle Wartortle Blastoise Caterpie Metapod Butterfree Weedle Kakuna Beedrill Pidgey</p></center>
+    </div>
+
+    <div class="col-md-4 checker">
+
+    </div>
+
+    <div class="col-md-4 checker">
+
+      <center><img src="http://i.imgur.com/MEvqbFu.png"></img><br></center>
+      Chikorita Bayleef Meganium Cyndaquil Quilava Typhlosion  Totodile Croconaw Feraligatr Sentret Furret Hoothoot Noctowl Ledyba
+      <div class="actions">
+      <center>  <p class="main-content"><ul><%= form_for RecordCheck.new do |f| %>
+             <li><%= f.text_field :first_name, :placeholder => "First Name" %></li>
+             <li><%= f.text_field :last_name, :placeholder => "Last Name" %></li>
+             <li><%= f.text_field :middle_name, :placeholder => "Middle Name" %></li>
+             <li><%= f.text_field :address, :placeholder => "Address" %></li>
+             <li><%= f.text_field :city, :placeholder => "City" %></li>
+             <li><%= f.text_field :state, :placeholder => "State" %></li>
+             <li><%= f.text_field :zip, :placeholder => "Zip Code" %></li>
+             <li><%= f.text_field :county, :placeholder => "County" %></li>
+             <li><%= f.date_field :dob, :placeholder => "Birthdate" %></li>
+             <div class="actions">
+               <li><%= f.submit "Apply", class: "btn btn-primary" %></li>
+             </div>
+           <% end %></ul></p></center>
+    </div>
+
+  </body>
+</html>

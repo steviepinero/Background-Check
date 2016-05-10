@@ -1,24 +1,33 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Simple Check</title>
+  </head>
+  <body>
+    <center><h1> The Little Background Checker </h1>
 
-<h1>Listing Record Checks</h1>
+    <div class="col-md-4 how">
+      <p>Bulbasaur Ivysaur Venusaur Charmander Charmeleon Charizard Squirtle Wartortle Blastoise Caterpie Metapod Butterfree Weedle Kakuna Beedrill Pidgey</p>
+    </div>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+    <div class="col-md-4 why">
+      <p>Bulbasaur Ivysaur Venusaur Charmander Charmeleon Charizard Squirtle Wartortle Blastoise Caterpie Metapod Butterfree Weedle Kakuna Beedrill Pidgey</p>
+    </div>
 
-  <tbody>
-    <% @record_check.each do |record_check| %>
-      <tr>
-        <td><%= link_to 'Show', record_check %></td>
-        <td><%= link_to 'Destroy', record_check, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <div class="col-md-4 price">
+      <p>Bulbasaur Ivysaur Venusaur Charmander Charmeleon Charizard Squirtle Wartortle Blastoise Caterpie Metapod Butterfree Weedle Kakuna Beedrill Pidgey</p></center>
+    </div>
 
-<br>
+    <div class="col-md-4 checker">
 
-<%= link_to 'New Record check', new_record_check_path %>
+    </div>
+
+    <div class="col-md-4 checker">
+      <br><br>
+      Chikorita Bayleef Meganium Cyndaquil Quilava Typhlosion  Totodile Croconaw Feraligatr Sentret Furret Hoothoot Noctowl Ledyba
+      <%#= render "form" %>
+    </div>
+
+  </body>
+</html>

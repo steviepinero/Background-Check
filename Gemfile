@@ -36,9 +36,7 @@ gem 'hpricot'
 #bootstrap gems
 gem 'bootstrap-sass', '~> 3.3.6'
 
-#pdf generator
-gem 'wicked_pdf'
-gem 'wkhtmltopdf-binary'
+gem 'bootstrap-glyphicons'
 
 gem 'animate-rails'
 

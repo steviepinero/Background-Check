@@ -43,7 +43,7 @@ before_action :require_user, only: [:index, :show, :new]
 @parsed = JSON.parse(@response.body)
 #byebug
 p @parsed
-  p approval
+
 
 
    @record_check = RecordCheck.new(record_check_params)
@@ -61,30 +61,9 @@ p @parsed
 
   end
 
-  # def generate_approval_code(size = 9)
-  # charset = %w{ 2 3 4 6 7 9 A C D E F G H J K M N P Q R T V W X Y Z}
-  # (0...size).map{ charset.to_a[rand(charset.size)] }.join
-  #
-  #
-  # end
-
-def approval
-  @parsed.extend Hashie::Extensions::DeepFind
-  @deeper = @parsed.deep_find(:Description)
-     if @deeper.to_s.include? "ANIMAL" #asks if animal is included
-  p @deeper
-   @decision = "Not approved"
-   @approval_code = "not approved"
-     redirect_to  :action => 'show'
-     else
-  p @deeper
-   @decision = "approved"
-   @approval_code = SecureRandom.hex(6)
-   p @approval_code
 
 
-     end
-end
+
 
 
 
@@ -93,19 +72,6 @@ def index
 end
 
 def show
-  # respond_to do |format|
-  # format.pdf do
-  #   @approval_text = "#{@approval_code}"
-  #   render :pdf => "approved",
-  #          :template => 'record_checks/show.pdf.erb',
-  #          :layout => 'pdf',
-  #          :footer => {
-  #            :center => "Center",
-  #            :left => "Left",
-  #            :right => "Right"
-  #          }
-      #    end
-      #  end
 
 end
 

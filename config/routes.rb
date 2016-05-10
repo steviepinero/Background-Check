@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'record_checks#new'
+  root 'record_checks#home'
   get  'record_checks' => 'record_checks#new'
   post 'record_checks/create' => 'record_checks#create'
 
@@ -17,7 +17,7 @@ Rails.application.routes.draw do
 
   get '/login' => 'sessions#new'
   post 'login' => 'sessions#create'
-  delete 'logout' => 'sessions#destroy'
+  get 'logout' => 'sessions#destroy'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
