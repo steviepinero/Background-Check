@@ -25,6 +25,6 @@ module Backgroundcheck
     config.assets.enabled = true
     config.assets.debug = true
     config.assets.compile = false
-    config.serve_static_assets = false
+    config.serve_static_files = false
   end
 end
