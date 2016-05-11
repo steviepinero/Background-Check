@@ -15,8 +15,8 @@ Rails.application.routes.draw do
   get 'signup' => 'users#new'
    resources :users
 
-  get 'login' => 'sessions#new'
-  post 'login' => 'sessions#create'
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
   get 'logout' => 'sessions#destroy'
 
   # Example of regular route:
