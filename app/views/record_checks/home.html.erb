@@ -38,7 +38,7 @@
       <center><img src="http://i.imgur.com/MEvqbFu.png"></img><br></center>
         <center><h3> Search </h3>
         <p> Background checks made easy, just fill out the form for your instant results.</p></center>
-      <div class="actions"><% if current_user %>
+      <div class="actions">
       <center>  <p class="main-content"><ul><%= form_for RecordCheck.new do |f| %>
              <li><%= f.text_field :first_name, :placeholder => "First Name" %></li>
              <li><%= f.text_field :last_name, :placeholder => "Last Name" %></li>
@@ -52,10 +52,10 @@
              <div class="actions">
                <li><%= f.submit "Apply", class: "btn btn-default" %></li>
              </div>
-           <% end %></ul></p></center>
-           <% else %>
+           </ul></p></center>
+
            <center><li><%= link_to "Login", 'login',class: "btn btn-default" %></a></li></center>
-           <% end %>
+
     </div>
 
   </body>
