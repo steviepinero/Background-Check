@@ -62,7 +62,23 @@ p @parsed
   end
 
 
-
+  # def approval
+  #   @parsed.extend Hashie::Extensions::DeepFind
+  #   @deeper = @parsed.deep_find(:Description)
+  #      if @deeper.to_s.include? "ANIMAL" #asks if animal is included
+  #   p @deeper
+  #    @decision = "Not approved"
+  #    @approval_code = "not approved"
+  #      redirect_to  :action => 'show'
+  #      else
+  #   p @deeper
+  #    @decision = "approved"
+  #    @approval_code = SecureRandom.hex(6)
+  #    p @approval_code
+  #
+  #
+  #      end
+  # end
 
 
 
