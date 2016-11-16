@@ -13,8 +13,7 @@ Rails.application.routes.draw do
   get 'record_checks/show', to: 'record_checks#show'
 
   get 'signup' => 'users#new'
-   resources :users
-
+ 
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   get 'logout' => 'sessions#destroy'
